@@ -1,0 +1,16 @@
+default
+{
+    state_entry()
+    {
+        llSensorRepeat("", "", AGENT, 5.0, PI, 10.0);
+    }
+    sensor(integer detected)
+    {
+        if(detected)
+        {
+            llSetColor(<1.0, 0.0, 0.0>, ALL_SIDES);
+            llSleep(5.0);
+            llSetColor(<0.3, 0.0, 0.6>, ALL_SIDES);
+        }
+    }
+}
